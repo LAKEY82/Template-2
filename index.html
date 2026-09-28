@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dinuka & Tharushi · 19 January 2027</title>
+  <meta name="description" content="You are invited to celebrate the wedding of Dinuka & Tharushi on 19th January 2027 in Colombo.">
+  <meta name="theme-color" content="#4a0e19">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Pinyon+Script&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="Images/frames/frame_001.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mono">D <span>&amp;</span> T</div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- ============ Scroll-driven video ============ -->
+  <section class="intro" id="intro" aria-label="Save the date">
+    <div class="intro__stage">
+      <canvas class="intro__bg" id="introBg" aria-hidden="true"></canvas>
+      <canvas class="intro__canvas" id="introCanvas" role="img"
+              aria-label="Animation: a vintage car drives down a flower-lined aisle. Save the Date, 19th January 2027."></canvas>
+      <div class="intro__hint" id="introHint">
+        <span>Scroll to begin</span>
+        <i></i>
+      </div>
+    </div>
+  </section>
+
+  <div class="marble">
+    <main class="sheet">
+
+      <!-- ============ Hero: envelope ============ -->
+      <section class="hero">
+        <h1 class="script hero__title reveal">Wedding<br><span>invitation</span></h1>
+        <div class="envelope reveal" aria-hidden="true">
+          <svg viewBox="0 0 320 210">
+            <defs>
+              <linearGradient id="envBody" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7a1a2c"/><stop offset="1" stop-color="#4c0d19"/>
+              </linearGradient>
+              <linearGradient id="envFlap" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8d2236"/><stop offset="1" stop-color="#5f1222"/>
+              </linearGradient>
+            </defs>
+            <g transform="rotate(-6 160 105)">
+              <rect x="20" y="30" width="280" height="160" rx="6" fill="url(#envBody)"/>
+              <path d="M20 190 L150 105 Q160 98 170 105 L300 190Z" fill="#62111f" opacity=".85"/>
+              <path d="M20 36 L150 118 Q160 124 170 118 L300 36 Q300 30 294 30 L26 30 Q20 30 20 36Z" fill="url(#envFlap)"/>
+              <path d="M20 36 L150 118 Q160 124 170 118 L300 36" fill="none" stroke="#3a0912" stroke-opacity=".5"/>
+              <use href="#seal" x="124" y="84" width="72" height="72"/>
+            </g>
+          </svg>
+        </div>
+        <p class="script names reveal">Dinuka<br><span>&amp;</span><br>Tharushi</p>
+      </section>
+
+      <!-- ============ Greeting card + calendar ============ -->
+      <section class="greet">
+        <div class="cartouche reveal">
+          <svg class="cartouche__cap" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 64V42Q24 42 26 18H128Q146 18 156 9Q178 -4 200 0Q222 -4 244 9Q254 18 272 18H374Q376 42 400 42V64Z" fill="var(--paper)"/>
+            <path d="M12 64V52Q34 50 38 28H132Q150 28 160 19Q180 8 200 10Q220 8 240 19Q250 28 268 28H362Q366 50 388 52V64" fill="none" stroke="var(--wine-soft)" stroke-opacity=".45"/>
+          </svg>
+          <div class="cartouche__body">
+            <h2 class="script greet__title">Dear family<br>&amp; friends!</h2>
+            <p>With joy in our hearts, we invite you to share in the happiest day of our lives and become part of our family's story.</p>
+            <div class="cal" aria-label="Tuesday, 19th January 2027">
+              <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+              <b>18</b>
+              <b class="cal__day">19
+                <svg viewBox="0 0 60 54" aria-hidden="true"><path d="M30 50C12 38 2 28 3 16 4 6 13 1 21 3c5 1 8 5 9 9 1-4 4-8 9-9 8-2 17 3 18 13 1 12-9 22-27 34" fill="none" stroke="var(--wine)" stroke-width="2.2" stroke-linecap="round"/></svg>
+              </b>
+              <b>20</b><b>21</b><b>22</b><b>23</b><b>24</b>
+            </div>
+            <p class="script cal__month">January</p>
+          </div>
+        </div>
+        <svg class="drape drape--over" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true"><use href="#drape"/></svg>
+      </section>
+
+      <!-- ============ Countdown ============ -->
+      <section class="countdown">
+        <h2 class="script title reveal">Until we say “I do”</h2>
+        <div class="count reveal" id="count" role="timer" aria-live="off">
+          <div><b data-u="d">000</b><span>Days</span></div>
+          <div><b data-u="h">00</b><span>Hours</span></div>
+          <div><b data-u="m">00</b><span>Minutes</span></div>
+          <div><b data-u="s">00</b><span>Seconds</span></div>
+        </div>
+        <p class="count__done script" id="countDone" hidden>Today is the day!</p>
+      </section>
+
+      <!-- ============ Venue ============ -->
+      <section class="venue">
+        <div class="note reveal">
+          <svg class="note__seal" viewBox="0 0 72 72" aria-hidden="true"><use href="#seal"/></svg>
+          <h2 class="script note__title">The celebration will be held at</h2>
+          <p class="script note__place">Cinnamon Grand</p>
+          <p>77 Galle Road, Colombo 03</p>
+          <a class="btn btn--wine" href="https://www.google.com/maps/search/?api=1&amp;query=Cinnamon+Grand+Colombo" target="_blank" rel="noopener">View on the map</a>
+          <p class="note__small">Guests arrive at</p>
+          <p class="script note__time">9:00 am</p>
+        </div>
+      </section>
+
+      <div class="bouquet reveal" aria-hidden="true"><svg viewBox="0 0 320 230"><use href="#bouquet"/></svg></div>
+
+      <!-- ============ Programme ============ -->
+      <section class="program">
+        <h2 class="script title reveal">Order of the day</h2>
+        <ol class="agenda">
+          <li class="reveal"><time class="script">9:00</time><span>Arrival of guests</span></li>
+          <li class="reveal"><time class="script">9:47</time><span>Poruwa ceremony at the auspicious time</span></li>
+          <li class="reveal"><time class="script">10:30</time><span>Registration of marriage</span></li>
+          <li class="reveal"><time class="script">12:30</time><span>Lunch reception</span></li>
+          <li class="reveal"><time class="script">16:00</time><span>Going-away</span></li>
+        </ol>
+      </section>
+
+      <svg class="drape" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true"><use href="#drape"/></svg>
+
+      <!-- ============ Dress code ============ -->
+      <section class="dress">
+        <h2 class="script title reveal">Dress code</h2>
+        <p class="reveal">We would be delighted if you chose outfits in the colours of our wedding. Sarees, osariyas and suits are all welcome.</p>
+        <ul class="swatches reveal" aria-label="Wedding colours">
+          <li style="--c:#5a1523" title="Burgundy"></li>
+          <li style="--c:#8b5a62" title="Dusty rose"></li>
+          <li style="--c:#b9a08a" title="Taupe"></li>
+          <li style="--c:#ece2d4" title="Ivory"></li>
+        </ul>
+      </section>
+
+      <!-- ============ Gifts ============ -->
+      <section class="gifts">
+        <div class="paper reveal">
+          <p>We won't have time to enjoy bouquets on the day, so instead of flowers we'd be happy to receive a bottle for our home bar, to open again on the anniversaries to come.</p>
+          <p>The best gift of all is your presence. If you'd like to give something more, a blessing in an envelope will help us build our dreams together.</p>
+        </div>
+        <svg class="drape drape--over" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true"><use href="#drape"/></svg>
+      </section>
+
+      <!-- ============ RSVP ============ -->
+      <section class="rsvp" id="rsvp">
+        <h2 class="script title reveal">Guest form</h2>
+        <p class="reveal">Please fill in the form below by 15th December 2026. It will help us plan the celebration.</p>
+        <form class="form reveal" id="rsvpForm" novalidate>
+          <label class="field">
+            <span>Your full name</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <fieldset>
+            <legend>Will you be able to attend?</legend>
+            <label class="opt"><input type="radio" name="attending" value="Yes, with pleasure" checked><i></i>Yes, with pleasure</label>
+            <label class="opt"><input type="radio" name="attending" value="Unfortunately, I can't"><i></i>Unfortunately, I can't</label>
+          </fieldset>
+          <!-- Only shown to guests who are attending -->
+          <fieldset class="attending-only" id="attendingOnly">
+            <div class="attending-only__inner">
+              <div class="guests">
+                <span class="guests__label" id="guestsLabel">Number of guests <small>(including you)</small></span>
+                <div class="stepper" role="group" aria-labelledby="guestsLabel">
+                  <button type="button" data-step="-1" aria-label="Fewer guests">−</button>
+                  <input name="guests" type="number" inputmode="numeric" min="1" max="10" value="1" aria-labelledby="guestsLabel">
+                  <button type="button" data-step="1" aria-label="More guests">+</button>
+                </div>
+              </div>
+              <fieldset>
+                <legend>Drink preferences</legend>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="Red wine"><i></i>Red wine</label>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="White wine"><i></i>White wine</label>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="Sparkling wine"><i></i>Sparkling wine</label>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="Beer"><i></i>Beer</label>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="Arrack"><i></i>Arrack</label>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="Whisky"><i></i>Whisky</label>
+                <label class="opt opt--box"><input type="checkbox" name="drinks" value="Soft drinks only"><i></i>I don't drink alcohol</label>
+              </fieldset>
+            </div>
+          </fieldset>
+          <button class="btn btn--paper" type="submit">Send</button>
+          <p class="form__msg" id="rsvpMsg" role="status"></p>
+        </form>
+      </section>
+
+      <!-- ============ Closing ============ -->
+      <footer class="closing">
+        <p class="closing__line reveal">We can't wait to see you<br>at our wedding!</p>
+        <div class="bouquet bouquet--small reveal" aria-hidden="true"><svg viewBox="0 0 320 230"><use href="#bouquet"/></svg></div>
+        <p class="script names reveal">Dinuka<br><span>&amp;</span><br>Tharushi</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ============ Shared artwork ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="waxG" cx=".38" cy=".35" r=".75">
+        <stop offset="0" stop-color="#f3dcaa"/><stop offset=".55" stop-color="#c99a58"/><stop offset="1" stop-color="#8a6230"/>
+      </radialGradient>
+      <linearGradient id="silkA" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#9c2940"/><stop offset=".5" stop-color="#5e1020"/><stop offset="1" stop-color="#3a0812"/>
+      </linearGradient>
+      <linearGradient id="silkB" x1="0" y1="0" x2="1" y2=".4">
+        <stop offset="0" stop-color="#4d0c19"/><stop offset=".35" stop-color="#a63049"/><stop offset=".55" stop-color="#6a1426"/><stop offset=".8" stop-color="#b8405a"/><stop offset="1" stop-color="#5a0f1f"/>
+      </linearGradient>
+      <linearGradient id="silkC" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#3e0913"/><stop offset=".45" stop-color="#7c1b31"/><stop offset=".7" stop-color="#43091a"/><stop offset="1" stop-color="#6f1629"/>
+      </linearGradient>
+      <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+    </defs>
+
+    <!-- Wax seal with monogram -->
+    <symbol id="seal" viewBox="0 0 72 72">
+      <path d="M36 3c6 0 8 3 13 4s9 1 12 6 1 8 3 13 5 7 4 12-5 7-6 12-1 9-6 12-8 1-13 3-7 5-12 5-7-4-12-5-10 0-13-4-1-8-3-13-6-7-6-12 4-7 4-12-2-9 2-13 8-3 12-5 5-7 11-8Z" fill="url(#waxG)"/>
+      <circle cx="36" cy="36" r="22" fill="none" stroke="#8a6230" stroke-width="1.4" opacity=".7"/>
+      <circle cx="36" cy="36" r="19.5" fill="none" stroke="#fbeccc" stroke-width=".6" opacity=".6"/>
+      <text x="36" y="44" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="21" fill="#7a5426">DT</text>
+    </symbol>
+
+    <!-- Rose: petals take their colour from --petal / --petal-dark -->
+    <symbol id="rose" viewBox="-50 -50 100 100" overflow="visible">
+      <g fill="var(--petal)">
+        <path d="M0 0C-26-8-34-40 0-46 34-40 26-8 0 0Z"/>
+        <path d="M0 0C-26-8-34-40 0-46 34-40 26-8 0 0Z" transform="rotate(72)"/>
+        <path d="M0 0C-26-8-34-40 0-46 34-40 26-8 0 0Z" transform="rotate(144)"/>
+        <path d="M0 0C-26-8-34-40 0-46 34-40 26-8 0 0Z" transform="rotate(216)"/>
+        <path d="M0 0C-26-8-34-40 0-46 34-40 26-8 0 0Z" transform="rotate(288)"/>
+      </g>
+      <g fill="none" stroke="var(--petal-dark)" stroke-width="1.6" stroke-linecap="round" opacity=".55">
+        <path d="M-30-22C-20-38 20-38 30-22"/><path d="M-36 8C-38 26-14 38 4 36"/><path d="M34 12C30 30 14 38 2 38"/>
+      </g>
+      <circle r="26" fill="var(--petal)"/>
+      <circle r="26" fill="var(--petal-dark)" opacity=".18"/>
+      <g fill="none" stroke="var(--petal-dark)" stroke-width="2" stroke-linecap="round" opacity=".75">
+        <path d="M-20 6C-24-14-4-24 12-18"/>
+        <path d="M18-8C24 10 6 24-10 18"/>
+        <path d="M-12 2C-14-10 0-14 8-8"/>
+        <path d="M10 2C10 10 0 14-6 8"/>
+        <path d="M-3-2C-2-6 4-5 3 0"/>
+      </g>
+    </symbol>
+
+    <symbol id="leaf" viewBox="0 -12 50 24" overflow="visible">
+      <path d="M0 0C10-12 32-14 50 0 32 14 10 12 0 0Z" fill="var(--leaf)"/>
+      <path d="M2 0H44" stroke="#000" stroke-opacity=".2" stroke-width="1"/>
+    </symbol>
+
+    <!-- Bouquet -->
+    <symbol id="bouquet" viewBox="0 0 320 230">
+      <g style="--leaf:#a98a63">
+        <use href="#leaf" width="70" height="34" transform="translate(150 120) rotate(200) translate(0 -17)"/>
+        <use href="#leaf" width="64" height="30" transform="translate(160 120) rotate(-20) translate(40 -15)"/>
+        <use href="#leaf" width="60" height="28" transform="translate(150 130) rotate(150) translate(40 -14)"/>
+      </g>
+      <g style="--leaf:#5f6a4c">
+        <use href="#leaf" width="70" height="34" transform="translate(160 110) rotate(-160) translate(50 -17)"/>
+        <use href="#leaf" width="70" height="34" transform="translate(160 110) rotate(-10) translate(56 -17)"/>
+        <use href="#leaf" width="60" height="28" transform="translate(160 120) rotate(40) translate(46 -14)"/>
+        <use href="#leaf" width="60" height="28" transform="translate(150 120) rotate(130) translate(50 -14)"/>
+        <use href="#leaf" width="56" height="26" transform="translate(160 100) rotate(-70) translate(40 -13)"/>
+        <use href="#leaf" width="56" height="26" transform="translate(150 100) rotate(-115) translate(40 -13)"/>
+      </g>
+      <g style="--petal:#6e1628;--petal-dark:#2e0510">
+        <use href="#rose" x="52" y="70" width="64" height="64"/>
+        <use href="#rose" x="200" y="60" width="62" height="62"/>
+        <use href="#rose" x="140" y="148" width="54" height="54"/>
+      </g>
+      <g style="--petal:#8f3346;--petal-dark:#3e0b17">
+        <use href="#rose" x="118" y="40" width="46" height="46"/>
+        <use href="#rose" x="232" y="120" width="44" height="44"/>
+      </g>
+      <g style="--petal:#f1e6d6;--petal-dark:#b59c83">
+        <use href="#rose" x="92" y="98" width="84" height="84"/>
+        <use href="#rose" x="160" y="84" width="76" height="76"/>
+        <use href="#rose" x="140" y="30" width="60" height="60"/>
+        <use href="#rose" x="40" y="130" width="50" height="50"/>
+      </g>
+      <g fill="#e8d6bf"><circle cx="30" cy="112" r="5"/><circle cx="284" cy="104" r="5"/><circle cx="104" cy="54" r="4"/><circle cx="262" cy="176" r="4"/></g>
+      <g fill="#7a1a2c"><circle cx="40" cy="96" r="4"/><circle cx="292" cy="130" r="4"/><circle cx="212" cy="190" r="4"/></g>
+    </symbol>
+
+    <!-- Silk drape -->
+    <symbol id="drape" viewBox="0 0 400 150" preserveAspectRatio="none">
+      <path d="M0 18C60 4 110 50 190 44S330 0 400 14V150H0Z" fill="url(#silkA)"/>
+      <path d="M0 50C70 20 120 80 210 70S340 30 400 46V150H0Z" fill="url(#silkB)"/>
+      <path d="M0 50C70 20 120 80 210 70S340 30 400 46" fill="none" stroke="#e07a90" stroke-width="3" opacity=".45" filter="url(#soft)"/>
+      <path d="M0 92C80 64 150 118 240 100S350 76 400 88V150H0Z" fill="url(#silkC)"/>
+      <path d="M20 88C90 66 150 112 236 98" fill="none" stroke="#c4506a" stroke-width="4" opacity=".4" filter="url(#soft)"/>
+    </symbol>
+  </svg>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
